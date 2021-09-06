@@ -9,6 +9,10 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import javax.validation.constraints.*;
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+
+@ApiModel(description =  "Esta clase representa un Customer")
 @Data @AllArgsConstructor @NoArgsConstructor @Builder
 public class CustomerDto {
 
@@ -19,6 +23,7 @@ public class CustomerDto {
     private String lastname;
 
     @NotNull
+    @ApiModelProperty(example = "72498398")
     private String dni;
     private LocalDate dateOfBirth; // date of birth
     private int age;
